@@ -1,0 +1,22 @@
+<launch>
+    <!-- Set parameters -->
+    <!-- X = -1.49   Y = -7.53 seit500.bag-->
+    <!-- X = -8.225   Y = -7.167 sefaBags1.bag-->
+    <!-- X = -8.2   Y = -7.2 sefaBags1.bag-->
+    <param name="initial_guess_X" type="double" value="-8.6"/>     
+    <param name="initial_guess_Y" type="double" value="-7.2" />
+    <param name="initialGuess_yaw_degrees" type="double" value="265.364" />
+    <param name="maxIteration" type="int" value="10" />
+    <param name="epsilon" type="double" value="0.1" />
+    <param name="sumOfDifferenceThreshold" type="double" value="5.0" />
+    <param name="vShapeModelName" type="string" value="RMRS004.pcd" />
+    <param name="laserFrameName" type="string" value="/r300311695/base_front_laser_link" /> <!-- Set robot laser frame according to your robot -->
+    <param name="mapFrameName" type="string" value="v/mjdtwfb31e2e/map" />
+    <param name="laserScanName" type="string" value="/r300311695/scan" />
+    <param name="absolute_path" type="string" value="/home/sefa/catkin_ws/src/dock_scan_matching/src/" />
+    <!-- Launch your node -->
+    <node name="laser_scan_processor" pkg="dock_scan_matching" type="laser_scan_processor" output="screen">
+        <remap from="/tf" to="/r300311695/tf"/>
+        <remap from="/tf_static" to="/r300311695/tf_static"/>
+    </node>
+</launch>
