@@ -1,9 +1,8 @@
 # Affine ICP with Correntropy Criterion for Laser Scan Matching
-![affineICP1](https://github.com/sefakurtipek/precise-scan-matching-using-affine-ICP/assets/36789388/b143d0ca-c345-4197-9de4-2e5fdb8d4c0a)
-
 ## Overview
 The `dock_scan_matching` package is a specialized ROS package, it implements the affine Iterative Closest Point (ICP) algorithm with correntropy criterion and point-to-line metric, based on the paper "A Precise Scan Matching Based Localization Method for an Autonomously Guided Vehicle in Smart Factories". It is tailored for accurate docking tasks in a factory.  Entropy (correntropy) criterion is used in order to provide robustness against noise and/or outliers.
 ![affineICP2](https://github.com/sefakurtipek/precise-scan-matching-using-affine-ICP/assets/36789388/83bb056d-085b-420a-b2b2-11a7b7f809be)
+![affineICP1](https://github.com/sefakurtipek/precise-scan-matching-using-affine-ICP/assets/36789388/b143d0ca-c345-4197-9de4-2e5fdb8d4c0a)
 ## Dependencies
 - ROS (tested on Melodic)
 - PCL (tested on 1.2)
