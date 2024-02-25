@@ -1,8 +1,9 @@
 # Affine ICP with Correntropy Criterion for Laser Scan Matching
+![affineICP1](https://github.com/sefakurtipek/precise-scan-matching-using-affine-ICP/assets/36789388/b143d0ca-c345-4197-9de4-2e5fdb8d4c0a)
 
 ## Overview
 The `dock_scan_matching` package is a specialized ROS package, it implements the affine Iterative Closest Point (ICP) algorithm with correntropy criterion and point-to-line metric, based on the paper "A Precise Scan Matching Based Localization Method for an Autonomously Guided Vehicle in Smart Factories". It is tailored for accurate docking tasks in a factory.  Entropy (correntropy) criterion is used in order to provide robustness against noise and/or outliers.
-
+![affineICP2](https://github.com/sefakurtipek/precise-scan-matching-using-affine-ICP/assets/36789388/83bb056d-085b-420a-b2b2-11a7b7f809be)
 ## Dependencies
 - ROS (tested on Melodic)
 - PCL (tested on 1.2)
@@ -32,14 +33,14 @@ rosrun rviz rviz /tf:=/r300311695/tf /tf_static=/r300311695/tf_static
 
 ## Parameters you need to know
 The user may need to tune given parameters located in `params.launch` file.
-`initial_guess_X`: Guess point x value for target charge station center point according to map frame
-`initial_guess_Y`: Guess point y value for target charge station center point according to map frame
-`initialGuess_yaw_degrees`: Guess point yaw degree angle for target charge station center point according to map frame
-`maxIteration`: Maximum iteration for affine ICP algorithm to find closest point matching 
-`epsilon`: Threshold value for affine ICP 
+`initial_guess_X`: Guess point x value for target charge station center point according to map frame\
+`initial_guess_Y`: Guess point y value for target charge station center point according to map frame\
+`initialGuess_yaw_degrees`: Guess point yaw degree angle for target charge station center point according to map frame\
+`maxIteration`: Maximum iteration for affine ICP algorithm to find closest point matching \
+`epsilon`: Threshold value for affine ICP\
 `vShapeModelName`: robot charge station model point cloud file. Type of file is `.pcd`\
 `laserFrameName`: Frame name of laser scan data\
-`mapFrameName`: Map frame name. It is used to get frame transformation.\
+`mapFrameName`: Map frame name. It is used to get frame transformation\
 `laserScanName`: Laser scan data topic name. It is used to subscribe laser scan data\     
 `absolute_path`: Absolute path of project files. It is used to give model point cloud file location\
 ```bash
